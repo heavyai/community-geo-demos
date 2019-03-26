@@ -1,6 +1,6 @@
 
 <h1>Simplifying Open Street Map Data Analytics with OmniSci and Placemaker</h1>
-<h3>Dr. Mike Flaxman, March 2019</h3>
+<hr>Dr. Mike Flaxman, March 2019</hr>
 
 
 As a GIS professional, one of the most common questions I get is "how do I get basic data for my study area?"  In most places around the world, my short answer to this is usually 'OSM' or Open Street Map.  For those of you not familiar, OSM is a great crowd-sourced project which for many years has been generating truly open datasets of roads, buildings, hydrology, land use and other features across the planet.  Because it is crowd-sourced, its quality does vary from place to place, so a best practice is to sanity check against other available sources where they exist.  But in most of the world, OSM compares favorably with authoritative datasets.
@@ -15,7 +15,7 @@ A few year ago, I ran across two Python-based tools which changed my professiona
 
 I've combined those two libraries into an open source script/Jupyter Notebook I call 'Placemaker.'  The outputs could be used in any GIS package, but for larger areas, I like to explore in OmniSci's Immerse online platform.  This allows you to interactively display huge OSM datasets, and understand which attributes it has.  This is particularly useful with OSM data, where these can vary place to place.
 
-##How To Use Placemaker
+<h3>How To Use Placemaker</h3>
 
 1. Go to our GitHub site below (if you're not already there) and grab a copy of the placemaker.ipynb script:
 
@@ -27,7 +27,7 @@ I've combined those two libraries into an open source script/Jupyter Notebook I 
 
 4. From the Cell menu, select "Run All" Alternatiecly, you can shift-return over cells to execute step by step.  The defaults will give you three OSM tables: bounds, roads and buildings.
 
-##How It Works - Overview
+<h3>How It Works - Overview</h3>
 
 The workflow starts with a place name.  This is translated by OSMNX into a geographic polygon, and a set of geographic objects representing roads and buildings.  These are then converted in-memory to formats compatible with SQL geodatabases.  They can then either be exported into many common GIS file formats, or directly uploaded to an OmniSci database instance.
 
@@ -35,7 +35,7 @@ While Placemaker extracts data from some very specific sources, it uses methods 
 
 The outputs are a set of standard SQL-compatible geodatabase files.  These represent specific combinations of OSM tags as 'layers' more similar to conventional CAD and GIS, with one table for 'roads' and another for 'buildings' for example.
 
-##The Details
+<h3>The Details</h3>
 
 Placemaker gets boundary definition data from Open Street Map using the OSMNX library.  Under the hood, this calls the Nominatum API to translate place names to geographies.  For example, if you set the place name to 'Paraty, Brazil', this library returns a GeoDataFrame containing the bounding box and detailed geography representing the polygonal boundary of that place.  
 
@@ -59,7 +59,7 @@ Last but not least, I used the current list of reserved column names from OmniSc
 
 This also attempts to guess appropriate column types.  In that, it sacrifices some efficiency for robustness, so there is undoubtedly room for improvement on specific OSM columns.
 
-##Conclusions
+<h3>Conclusions</h3>
 
 I hope you find the 'Placemaker' utility script useful, either specifically for generating geospatial data projects in OmniSci, or more generally for getting OSM data into more-standard GIS form.  Routines like **gdf_to_omnisci** provide a pretty-generic new pathway for getting oddball geo formats into OmniSci.  In addition to OSM shown here, this approach should work for file formats not currently directly supported by OmniSci, including multi-layer archive formats such as ESRI's file geodatabases. 
 
