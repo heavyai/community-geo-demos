@@ -1,8 +1,8 @@
 
-<h1>Simplifying Open Street Map Data Analytics with OmniSci and Placemaker</h1>
+<h1>Simplifying Open Street Map Data Analytics<br> with OmniSci and Placemaker</h1>
 <hr>Dr. Mike Flaxman, March 2019</hr>
 
-<br>
+<p>
 As a GIS professional, one of the most common questions I get is "how do I get basic data for my study area?"  In most places around the world, my short answer to this is usually 'OSM' or Open Street Map.  For those of you not familiar, OSM is a great crowd-sourced project which for many years has been generating truly open datasets of roads, buildings, hydrology, land use and other features across the planet.  Because it is crowd-sourced, its quality does vary from place to place, so a best practice is to sanity check against other available sources where they exist.  But in most of the world, OSM compares favorably with authoritative datasets.
 
 One issue that many folks have with GIS data in general, and OSM in particular, is that it is mostly available in rather unusual data formats.  OSM's native formats are unique to that specific project - PDB (binary) and OSM (xml).  It uses a tagging structure which is rather different than conventional GIS attribute tables, and requires a bit of tweaking to get into a SQL relational database.  This in turn requires a set of dedicated tools just to get this specific data into common GIS formats.
