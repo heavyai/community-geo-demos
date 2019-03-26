@@ -1,6 +1,6 @@
 
-#Simplifying Open Street Map Data Analytics with OmniSci and Placemaker
-Dr. Mike Flaxman, March 2019
+<h1>Simplifying Open Street Map Data Analytics with OmniSci and Placemaker</h1>
+<h3>Dr. Mike Flaxman, March 2019</h3>
 
 
 As a GIS professional, one of the most common questions I get is "how do I get basic data for my study area?"  In most places around the world, my short answer to this is usually 'OSM' or Open Street Map.  For those of you not familiar, OSM is a great crowd-sourced project which for many years has been generating truly open datasets of roads, buildings, hydrology, land use and other features across the planet.  Because it is crowd-sourced, its quality does vary from place to place, so a best practice is to sanity check against other available sources where they exist.  But in most of the world, OSM compares favorably with authoritative datasets.
